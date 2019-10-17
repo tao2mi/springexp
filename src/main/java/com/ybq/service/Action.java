@@ -1,6 +1,5 @@
 package com.ybq.service;
 
-import com.ybq.aware.MyBeanPostProcessor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
@@ -8,6 +7,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.BeanFactoryAware;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContext;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
@@ -19,6 +19,12 @@ public class Action implements BeanNameAware, BeanFactoryAware, InitializingBean
     public String myName;
 
     public BeanFactory beanFactory;
+
+    public ApplicationContext applicationContext;
+
+    public Action(ApplicationContext applicationContext) {
+        this.applicationContext = applicationContext;
+    }
 
     public void setName(String name) {
         this.name = name;

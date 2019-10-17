@@ -29,6 +29,7 @@ public class Test1 {
         System.out.println(action.saySome("yyy"));
         System.out.println(action.myName);
         System.out.println(action.beanFactory);
+        System.out.println(action.applicationContext);
         logger.debug("end");
         System.out.println(ctx);
         ctx.close();

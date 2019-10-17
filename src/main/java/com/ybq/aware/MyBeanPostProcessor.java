@@ -13,13 +13,13 @@ public class MyBeanPostProcessor implements BeanPostProcessor {
 
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
-        logger.debug("yyy -- postProcessBeforeInitialization: " + beanName + ", " + ((Action) bean).name);
+        logger.debug("yyy -- postProcessBeforeInitialization: " + bean);
         return bean;
     }
 
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
-        logger.debug("yyy -- postProcessAfterInitialization: " + beanName + ", " + ((Action) bean).name);
+        logger.debug("yyy -- postProcessAfterInitialization: " + bean);
         return bean;
     }
 }
