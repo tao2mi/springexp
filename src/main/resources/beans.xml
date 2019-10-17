@@ -19,4 +19,6 @@
     <bean id="person" class="springBeanTest.Person" init-method="myInit"
           destroy-method="myDestory" scope="singleton" p:name="张三" p:address="广州"
           p:phone="123567889"/>
+
+    <bean id="myLifeCycle" class="springBeanTest.MyLifeCycle" />
 </beans>
