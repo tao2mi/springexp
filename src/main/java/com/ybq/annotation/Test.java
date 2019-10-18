@@ -18,5 +18,10 @@ public class Test {
                 new AnnotationConfigApplicationContext();
         ctx.scan("com.ybq.annotation");
         ctx.refresh();
+
+        ClassOne classOne = ctx.getBean(ClassOne.class);
+        System.out.println(classOne.printMsg());
+        System.out.println("==========");
+        System.out.println(ctx.getMessage("key1", null, null));
     }
 }
